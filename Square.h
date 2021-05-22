@@ -1,6 +1,7 @@
-//
+// Square.h
 // Created by Shutao on 5/21/2021.
-//
+// 1978017
+// class declaration file for the Square class
 
 
 #ifndef PROGRAM3_SQUARE_H

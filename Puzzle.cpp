@@ -1,8 +1,16 @@
-//
+// Puzzle.cpp
 // Created by Shutao on 5/21/2021.
-//
+// 1978017
+// class implementation file for the Puzzle class
 
 #include "Puzzle.h"
+
+Puzzle::Puzzle(int (*intString)[9]) {
+    for(int i = 0; i < 9; ++i)
+        for (int j = 0; j < 9; ++j) {
+            sudoku[i][j].setValue(intString[i][j]);
+        }
+}
 
 int Puzzle::get(int x, int y) {
     return sudoku[x][y].getValue();
