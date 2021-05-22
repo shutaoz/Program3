@@ -6,13 +6,14 @@
 #define PROGRAM3_PUZZLE_H
 
 #include "cstdlib"
+#include "Square.h"
 
 using namespace std;
 
 class Puzzle{
 private:
     //an array of Square objects
-    Square sudoku[][];
+    Square sudoku[9][9];
 
 public:
     //constructor
@@ -25,12 +26,17 @@ public:
     //setter that sets the values to a Square object stored at a location
     void set(int x, int y, int uValue);
 
-    //solve function that determine if a function is solvable
-    //the function returns true if the solve function returns true
-    bool solvable();
+    bool isPresentInCol(int col, int num);
 
-    //solve the Puzzle using backtracking
-    bool solve();
+    bool isPresentInRow(int row, int num);
+
+    bool isPresentInBox(int boxStartRow, int boxStartCol, int num);
+
+    bool findEmptyPlace(int &row, int &col);
+
+    bool isValidPlace(int row, int col, int num);
+
+    bool solveSudoku();
 
     //display the entire puzzle. to be called inside the overloaded operator
 

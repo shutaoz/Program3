@@ -14,10 +14,6 @@ class Square{
 private:
     int value_;
 
-    //the location of a square object within a Puzzle object
-    int xLoc;
-    int yLoc;
-
 public:
     //constructor
     Square();
@@ -28,7 +24,6 @@ public:
     //return value_ stored
     int getValue();
 
-    void setXY(int xVal, int yVal);
 
 
 

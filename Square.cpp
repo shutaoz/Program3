@@ -2,23 +2,19 @@
 // Created by Shutao on 5/21/2021.
 //
 
-Square(){
+#include "Square.h"
+
+Square::Square(){
     value_ = 0;
-    xLoc = 0;
-    yLoc = 0;
 
 }
 
-setValue(int value){
+void Square::setValue(int uValue) {
     value_ = uValue;
 
 }
 
-getValue(){
+int Square::getValue() {
     return value_;
 }
 
-setXY(int xVal, int yVal){
-    xLoc = xVal;
-    yLoc = yVal;
-}
